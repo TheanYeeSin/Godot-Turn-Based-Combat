@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://crf48vsai54hv"]
+
+[ext_resource type="Script" path="res://scenes/enemy_button.gd" id="1_a42g7"]
+
+[node name="EnemyButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 32
+script = ExtResource("1_a42g7")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://vbccipvqu7wk"]
+
+[ext_resource type="Texture2D" uid="uid://bkbfc4i1a0f6f" path="res://assets/Player 1.png" id="1_see5l"]
+[ext_resource type="Script" path="res://scenes/Character.gd" id="2_rosoq"]
+
+[resource]
+script = ExtResource("2_rosoq")
+title = "Player 1"
+icon = ExtResource("1_see5l")
+texture = ExtResource("1_see5l")
+agility = 12

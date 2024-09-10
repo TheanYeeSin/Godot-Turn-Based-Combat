@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://kcbsorh1rscs"]
+
+[ext_resource type="Texture2D" uid="uid://bthnglmdb1ns5" path="res://assets/Player 3.png" id="1_8jura"]
+[ext_resource type="Script" path="res://scenes/Character.gd" id="2_32wpg"]
+
+[resource]
+script = ExtResource("2_32wpg")
+title = "Player 3"
+icon = ExtResource("1_8jura")
+texture = ExtResource("1_8jura")
+agility = 12

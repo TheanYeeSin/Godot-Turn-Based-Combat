@@ -1,0 +1,182 @@
+[gd_scene load_steps=11 format=3 uid="uid://cusoscpob7xnc"]
+
+[ext_resource type="Script" path="res://scenes/CharacterSprite.gd" id="1_7lled"]
+[ext_resource type="Script" path="res://scenes/battle_scene.gd" id="1_728qh"]
+[ext_resource type="Resource" uid="uid://vbccipvqu7wk" path="res://resources/player_1.tres" id="2_ep3rj"]
+[ext_resource type="Script" path="res://scenes/Attack.gd" id="2_iqby1"]
+[ext_resource type="PackedScene" uid="uid://crf48vsai54hv" path="res://scenes/enemy_button.tscn" id="2_pkshd"]
+[ext_resource type="Resource" uid="uid://cyg7gkneuoa5i" path="res://resources/player_2.tres" id="3_hedw8"]
+[ext_resource type="Resource" uid="uid://kcbsorh1rscs" path="res://resources/player_3.tres" id="4_8dkpo"]
+[ext_resource type="Resource" uid="uid://bcf4u2txcejy6" path="res://resources/enemy_1.tres" id="6_43ppk"]
+[ext_resource type="Resource" uid="uid://pwkgaagb8081" path="res://resources/enemy_2.tres" id="7_apiir"]
+[ext_resource type="Resource" uid="uid://dnxlpstwsyuv" path="res://resources/enemy_3.tres" id="8_34txs"]
+
+[node name="BattleScene" type="Node2D" node_paths=PackedStringArray("player_group", "enemy_group", "timeline", "options")]
+script = ExtResource("1_728qh")
+player_group = NodePath("Players")
+enemy_group = NodePath("Enemies")
+timeline = NodePath("UI/Timeline")
+options = NodePath("UI/Option")
+enemy_button = ExtResource("2_pkshd")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Timeline" type="HBoxContainer" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_right = 130.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="TimelineSlot" type="Panel" parent="UI/Timeline"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Timeline/TimelineSlot"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TimelineSlot2" type="Panel" parent="UI/Timeline"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Timeline/TimelineSlot2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TimelineSlot3" type="Panel" parent="UI/Timeline"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Timeline/TimelineSlot3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TimelineSlot4" type="Panel" parent="UI/Timeline"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Timeline/TimelineSlot4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TimelineSlot5" type="Panel" parent="UI/Timeline"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Timeline/TimelineSlot5"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TimelineSlot6" type="Panel" parent="UI/Timeline"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Timeline/TimelineSlot6"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Option" type="VBoxContainer" parent="UI"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.0
+offset_top = -26.5
+offset_right = 54.0
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Attack" type="Button" parent="UI/Option"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 32
+text = "Attack"
+script = ExtResource("2_iqby1")
+
+[node name="EnemySelection" type="VBoxContainer" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -319.0
+offset_right = 14.0
+offset_bottom = -279.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Player 1" type="Sprite2D" parent="Players"]
+texture_filter = 1
+position = Vector2(800, 360)
+scale = Vector2(3, 3)
+script = ExtResource("1_7lled")
+character = ExtResource("2_ep3rj")
+
+[node name="Player 2" type="Sprite2D" parent="Players"]
+texture_filter = 1
+position = Vector2(970, 230)
+scale = Vector2(3, 3)
+script = ExtResource("1_7lled")
+character = ExtResource("3_hedw8")
+
+[node name="Player 3" type="Sprite2D" parent="Players"]
+texture_filter = 1
+position = Vector2(970, 500)
+scale = Vector2(3, 3)
+script = ExtResource("1_7lled")
+character = ExtResource("4_8dkpo")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy 1" type="Sprite2D" parent="Enemies"]
+texture_filter = 1
+position = Vector2(340, 360)
+scale = Vector2(3, 3)
+script = ExtResource("1_7lled")
+character = ExtResource("6_43ppk")
+
+[node name="Enemy 2" type="Sprite2D" parent="Enemies"]
+texture_filter = 1
+position = Vector2(140, 230)
+scale = Vector2(3, 3)
+script = ExtResource("1_7lled")
+character = ExtResource("7_apiir")
+
+[node name="Enemy 3" type="Sprite2D" parent="Enemies"]
+texture_filter = 1
+position = Vector2(140, 500)
+scale = Vector2(3, 3)
+script = ExtResource("1_7lled")
+character = ExtResource("8_34txs")
+
+[connection signal="pressed" from="UI/Option/Attack" to="UI/Option/Attack" method="_on_pressed"]

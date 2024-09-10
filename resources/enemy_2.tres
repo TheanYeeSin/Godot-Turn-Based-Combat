@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://pwkgaagb8081"]
+
+[ext_resource type="Texture2D" uid="uid://5cdbgrmql5jy" path="res://assets/Enemy 2.png" id="1_fuc2q"]
+[ext_resource type="Script" path="res://scenes/Character.gd" id="2_47731"]
+
+[resource]
+script = ExtResource("2_47731")
+title = "Enemy 2"
+icon = ExtResource("1_fuc2q")
+texture = ExtResource("1_fuc2q")
+agility = 11
